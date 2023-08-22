@@ -1,0 +1,28 @@
+\begin{tikzpicture}[
+  ]
+  \begin{axis}[
+    timeline,
+    xmin=-4.8e6, xmax=.5e6,
+    scaled ticks=base 10:-6, xlabel=M,
+    extra x ticks={-2.5e6, -0.2e6}, extra x tick labels={\(-2.5\), \(\frac{2}{10}\)},
+    ]
+    \addplot coordinates {
+      (-4.0e6,0)
+      (-2.5e6,0)
+      (-2.0e6,0)
+      (-0.2e6,0)
+    };
+    \node [pin={[pin edge={blue,thin,<-,shorten <=-2pt}, anchor=south, pin distance=4ex]above:
+      Australopithecus
+    }] at (-4e6,0) {};
+    \node [pin={[pin edge={blue,thin,<-,shorten <=-2pt}, anchor=south, pin distance=1ex]above:
+      Homo habilis
+    }] at (-2.5e6,0) {};
+    \node [pin={[pin edge={blue,thin,<-,shorten <=-2pt}, anchor=south west, pin distance=4ex]above:
+      Homo herectus
+    }] at (-2.0e6,0) {};
+    \node [pin={[pin edge={blue,thin,<-,shorten <=-2pt}, anchor=south, pin distance=1ex]above:
+      Homo sapiens
+    }] at (-0.2e6,0) {};
+  \end{axis}
+\end{tikzpicture}

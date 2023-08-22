@@ -1,0 +1,20 @@
+\usepackage{pgfplots}\pgfplotsset{compat=newest}
+\pgfplotsset{
+  timeline/.style={
+    axis x line=middle,
+    axis y line=none,
+    height=50pt,
+    width=\textwidth,
+    scale only axis,
+    x axis line style={->},
+    only marks,
+    xlabel style={below=2pt},
+    clip=false,
+    xtick scale label code/.code={},
+    tick style={semithick},
+  },
+}
+\tikzset{
+  text height=1.5ex,
+  text depth=.25ex,
+}

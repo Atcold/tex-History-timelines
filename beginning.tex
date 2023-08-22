@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+  \begin{axis}[
+    timeline,
+    xmin=-15e9, xmax=1e9,
+    scaled ticks=base 10:-9, xlabel=B,
+    extra x ticks={-5e9}, extra x tick label={\(-5\)},
+  ]
+    \addplot+ [mark options={fill=cyan, draw=darkgray}] coordinates {
+      (-13.8e9,0)
+      (-4.5e9,0)
+    };
+    \node [
+      pin={[pin edge={cyan,thin,<-},
+      anchor=south west, pin distance=1ex]above:
+      Beginning of the universe
+    }] at (-13.8e9,0) {};
+    \node [
+      pin={[pin edge={cyan,thin,<-,shorten <=-2pt},
+      anchor=south, pin distance=1ex]above:
+      Planet Earth
+    }] at (-4.5e9,0) {};
+  \end{axis}
+\end{tikzpicture}
